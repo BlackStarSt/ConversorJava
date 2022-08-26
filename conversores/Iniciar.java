@@ -1,17 +1,19 @@
-package ConversorDeMoedas;
+package conversores;
 import javax.swing.JOptionPane;
 
-public class index {
-	public static void main(String[] args) { 
+public class Iniciar {
+	public void iniciar() {
 		ConverteMoedas converter = new ConverteMoedas();
 
 		String[] tipoDeConversor = {"Conversor de Moedas", "Conversor de Temperatura"};
 		String pergunta = (String)JOptionPane.showInputDialog(null, "Escolha um tipo de conversor", 
 				null, JOptionPane.QUESTION_MESSAGE, null, tipoDeConversor, tipoDeConversor[0]);
+
 		if(pergunta == tipoDeConversor[0]) {
 			String[] tipoDeMoeda = {"Reais em Dólar", "Reais em Euro", "Dólar em Reais", "Euro em Reais"};
 			String escolheMoedas = (String)JOptionPane.showInputDialog(null, "Escolha um tipo de conversor", 
 					null, JOptionPane.QUESTION_MESSAGE, null, tipoDeMoeda, tipoDeMoeda[0]);
+
 			String input = null;
 			double valor;
 
@@ -34,8 +36,7 @@ public class index {
 						valor = Double.parseDouble(input);
 						converter.ReaisParaDolares(valor);
 					}
-				}
-				else if (escolheMoedas == tipoDeMoeda[3]) {
+				} else if (escolheMoedas == tipoDeMoeda[3]) {
 					input = JOptionPane.showInputDialog("Digite o valor em Euros(US$)");
 					if(input.matches("(?:\\.|[0-9])*")) {
 						valor = Double.parseDouble(input);
@@ -45,6 +46,8 @@ public class index {
 					}
 				}
 			} while(!input.matches("(?:\\.|,|[0-9])*"));
-		} 
+		}
+		Reiniciar r = new Reiniciar();
+		r.recomecar();
 	}
 }

@@ -1,5 +1,4 @@
-package ConversorDeMoedas;
-
+package conversores;
 import javax.swing.JOptionPane;
 
 public class ConverteMoedas {
