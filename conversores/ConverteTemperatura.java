@@ -20,16 +20,16 @@ public class ConverteTemperatura {
 		JOptionPane.showMessageDialog(null, valor + " Fahrenheit(F°) equivale a: " + fahr + " Celsius(C°)");
 	}
 	
-	public void KelvinParaCelcius (double valor) {
-		double kelvin = valor - 273.15;
-		kelvin = (double) Math.round(kelvin);
-		JOptionPane.showMessageDialog(null, valor + " Fahrenheit(F°) equivale a: " + kelvin + " Celsius(C°)");
-	}
-	
 	public void FahrParaKelvin (double valor) {
 		double fahr = (valor - 32) * 1.8 + 273.15;
 		fahr = (double) Math.round(fahr * 100d) / 100d;
 		JOptionPane.showMessageDialog(null, valor + " Fahrenheit(F°) equivale a: " + fahr + " Kelvin(K°)");
+	}
+	
+	public void KelvinParaCelcius (double valor) {
+		double kelvin = valor - 273.15;
+		kelvin = (double) Math.round(kelvin);
+		JOptionPane.showMessageDialog(null, valor + " Fahrenheit(F°) equivale a: " + kelvin + " Celsius(C°)");
 	}
 	
 	public void KelvinParaFahr(double valor) {

@@ -32,8 +32,8 @@ public class EscolheConversor {
 					"Celsius em Fahrenheit",
 					"Celsius em Kelvin",
 					"Fahrenheit em Celsius",
-					"Kelvin em Celsius",
 					"Fahrenheit para Kelvin",
+					"Kelvin em Celsius",
 					"Kelvin para Fahrenheit"
 				};
 				String escolheTemperatura = (String)JOptionPane.showInputDialog(null, "Escolha um tipo de conversor", 
